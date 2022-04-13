@@ -21,8 +21,8 @@ form.addEventListener("submit", function(e) {
     const value = parseInt(amount.value);
     const random = Math.floor(Math.random() * text.length);
 
-    //empty || -1 || >9
-    if(isNaN(value) || value < 0 || value > 9) {
+    //empty input
+    if(isNaN(value)) {
     result.innerHTML = `<p class="result">${text[random]}</p>`;
     }
     else {
